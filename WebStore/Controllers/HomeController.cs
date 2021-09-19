@@ -27,5 +27,10 @@ namespace WebStore.Controllers
         {
             return View(EmployeesList);
         }
+
+        public IActionResult Details(int id)
+        {
+            return View(EmployeesList[--id]);
+        }
     }
 }
