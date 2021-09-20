@@ -1,0 +1,33 @@
+﻿@model IEnumerable<WebStore.Models.Employee>
+
+<div class="container">
+    <h3>Сотрудники</h3>
+    <hr/>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Детали</td>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var person in Model)
+            {
+            <tr>
+                <td>@person.Id</td>
+                <td>@person.FirstName</td>
+                <td>@person.LastName</td>
+                <td>
+                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@person.Id">Перейти</a>
+                </td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <hr/>
+    <p>
+        <a asp-controller="Home" asp-action="Index">На главную</a>
+    </p>
+</div>
