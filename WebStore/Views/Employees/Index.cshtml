@@ -3,6 +3,11 @@
 <div class="container">
     <h3>Сотрудники</h3>
     <hr/>
+
+    <p>
+        <a asp-controller="Employees" asp-action="Create" class="btn-default">Создать</a>
+    </p>
+
     <table class="table">
         <thead>
             <tr>
@@ -20,7 +25,9 @@
                 <td>@person.FirstName</td>
                 <td>@person.LastName</td>
                 <td>
-                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@person.Id">Перейти</a>
+                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@person.Id">Перейти</a> | 
+                    <a asp-controller="Employees" asp-action="Edit" asp-route-id="@person.Id">Редактировать</a> | 
+                    <a asp-controller="Employees" asp-action="Delete" asp-route-id="@person.Id">Удалить</a>
                 </td>
             </tr>
             }
