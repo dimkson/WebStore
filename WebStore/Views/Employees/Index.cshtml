@@ -5,7 +5,7 @@
     <hr/>
 
     <p>
-        <a asp-controller="Employees" asp-action="Create" class="btn-default">Создать</a>
+        <a asp-controller="Employees" asp-action="Create" class="btn btn-primary">Создать</a>
     </p>
 
     <table class="table">
@@ -14,7 +14,7 @@
                 <td>#</td>
                 <td>Имя</td>
                 <td>Фамилия</td>
-                <td>Детали</td>
+                <td>Действия</td>
             </tr>
         </thead>
         <tbody>
@@ -25,9 +25,9 @@
                 <td>@person.FirstName</td>
                 <td>@person.LastName</td>
                 <td>
-                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@person.Id">Перейти</a> | 
-                    <a asp-controller="Employees" asp-action="Edit" asp-route-id="@person.Id">Редактировать</a> | 
-                    <a asp-controller="Employees" asp-action="Delete" asp-route-id="@person.Id">Удалить</a>
+                    <a asp-controller="Employees" asp-action="Details" asp-route-id="@person.Id" class="btn btn-default">Детали</a>
+                    <a asp-controller="Employees" asp-action="Edit" asp-route-id="@person.Id" class="btn btn-default">Редактировать</a>
+                    <a asp-controller="Employees" asp-action="Delete" asp-route-id="@person.Id" class="btn btn-default">Удалить</a>
                 </td>
             </tr>
             }
@@ -35,6 +35,6 @@
     </table>
     <hr/>
     <p>
-        <a asp-controller="Home" asp-action="Index">На главную</a>
+        <a asp-controller="Home" asp-action="Index" class="btn btn-primary">На главную</a>
     </p>
 </div>
