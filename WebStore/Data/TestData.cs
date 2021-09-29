@@ -7,9 +7,9 @@ namespace WebStore.Data
     {
         public static List<Employee> Employees { get; } = new()
         {
-            new Employee(1, "Иван", "Иванов", "Иванович", 30),
-            new Employee(2, "Петр", "Петров", "Петрович", 40),
-            new Employee(3, "Сидр", "Сидоров", "Сидорович", 25)
+            new Employee { Id = 1, FirstName = "Иван", LastName = "Иванов", MiddleName = "Иванович", Age = 30 },
+            new Employee { Id = 2, FirstName = "Петр", LastName = "Петров", MiddleName = "Петрович", Age = 40 },
+            new Employee { Id = 3, FirstName = "Сидр", LastName = "Сидоров", MiddleName = "Сидорович", Age = 25 }
         };
     }
 }
