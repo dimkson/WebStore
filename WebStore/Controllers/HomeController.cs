@@ -20,7 +20,7 @@ namespace WebStore.Controllers
 
         public IActionResult ProductDetails() => View();
 
-        public IActionResult Shop() => View();
+        //public IActionResult Shop() => View();
 
         public new IActionResult NotFound() => View();
     }
