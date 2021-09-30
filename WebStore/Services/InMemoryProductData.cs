@@ -21,7 +21,7 @@ namespace WebStore.Services
                 query = query.Where(p => p.SectionId == section_id);
             }
 
-            if (filter?.SectionId is { } brand_id)
+            if (filter?.BrandId is { } brand_id)
             {
                 query = query.Where(p => p.BrandId == brand_id);
             }
