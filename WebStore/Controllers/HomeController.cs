@@ -20,8 +20,13 @@ namespace WebStore.Controllers
 
         public IActionResult ProductDetails() => View();
 
-        //public IActionResult Shop() => View();
-
-        public new IActionResult NotFound() => View();
+        public IActionResult Status(string id)
+        {
+            return id switch
+            {
+                "404" => View("NotFound"),
+                _ => Content($"Status Code: {id}"),
+            };
+        }
     }
 }
