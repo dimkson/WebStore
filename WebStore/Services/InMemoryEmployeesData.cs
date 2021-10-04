@@ -27,7 +27,7 @@ namespace WebStore.Services
             if (TestData.Employees.Contains(employee))
                 return employee.Id;
 
-            employee = employee with { Id = ++_currentMaxId };
+            employee.Id = ++_currentMaxId;
             TestData.Employees.Add(employee);
 
             return employee.Id;
@@ -65,13 +65,10 @@ namespace WebStore.Services
             if (db_employee is null)
                 return;
 
-            db_employee = db_employee with
-            {
-                FirstName = employee.FirstName,
-                LastName = employee.LastName,
-                MiddleName = employee.MiddleName,
-                Age = employee.Age
-            };
+            db_employee.FirstName = employee.FirstName;
+            db_employee.LastName = employee.LastName;
+            db_employee.MiddleName = employee.MiddleName;
+            db_employee.Age = employee.Age;
         }
     }
 }
